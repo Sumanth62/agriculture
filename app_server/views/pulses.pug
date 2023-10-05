@@ -1,0 +1,98 @@
+html 
+    head    
+        style.
+            .imgcontainer{
+                display:flex;
+
+            }
+            img {
+                margin:20px;
+                width:250px;
+                height:250px;
+            }
+            .imgcontainerchild{
+                width:350px;
+                margin:20px;
+            }
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            h1 {
+                text-align: center;
+                color: brown;
+                font-size: 30px;
+            }
+            div{
+                font-size: 25px;
+            }
+            body{
+                background-image: url( "C:\Users\suman\OneDrive\Desktop\fruits.jpg");
+                //- background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .navbar{
+                gap: 20px;
+                margin: 0 0 0 50%;
+            }
+            a{
+                margin: 15px 0 15px 10px;
+                text-decoration: none;
+                color:black;
+
+            }
+            .navbarsec{
+                display:flex;
+                background-color:white;
+                padding:15px;
+            }
+            .imgcontainerchild{
+                background-color:grey;
+                border-radius:20px;
+                padding:30px;
+            }
+
+    body 
+        section.navbarsec
+            h1 Agriculture
+            div.navbar
+                a(href="/fruits") fruits
+                a(href="/pulses") pulses 
+                a(href="/vegtables") vegtables
+                a(href='/roots') roots 
+        h1 pulses
+        div.imgcontainer
+            div.imgcontainerchild
+                img(src=pulsesdata[0].image)
+                p #{pulsesdata[0].name}
+                p #{pulsesdata[0].quantity}
+                span #{pulsesdata[0].mrp} ₹ 
+                br
+                span #{pulsesdata[0].price} ₹
+                strike #{pulsesdata[0].mrp-pulsesdata[0].price}
+            div.imgcontainerchild
+                img(src=pulsesdata[1].image)
+                p #{pulsesdata[1].name}
+                p #{pulsesdata[1].quantity}
+                span #{pulsesdata[1].mrp} ₹
+                br
+                span #{pulsesdata[1].price} ₹
+                strike #{pulsesdata[1].mrp-pulsesdata[1].price}
+            div.imgcontainerchild
+                img(src=pulsesdata[2].image)
+                p #{pulsesdata[2].name}
+                p #{pulsesdata[2].quantity}
+                span #{pulsesdata[2].mrp} ₹
+                br
+                span #{pulsesdata[2].price} ₹
+                strike #{pulsesdata[2].mrp-pulsesdata[2].price}
+            div.imgcontainerchild
+                img(src=pulsesdata[3].image)
+                p #{pulsesdata[3].name}
+                p #{pulsesdata[3].quantity}
+                span #{pulsesdata[3].mrp} ₹
+                br
+                span #{pulsesdata[3].price} ₹
+                strike #{pulsesdata[3].mrp-pulsesdata[3].price}

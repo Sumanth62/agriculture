@@ -1,0 +1,97 @@
+html 
+    head    
+        style.
+            .imgcontainer{
+                display:flex;
+
+            }
+            img {
+                margin:20px;
+                width:250px;
+                height:255px;
+            }
+            .imgcontainerchild{
+                width:350px;
+                margin:20px;
+            }
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            h1 {
+                text-align: center;
+                color: brown;
+                font-size: 30px;
+            }
+            div{
+                font-size: 25px;
+            }
+            body{
+                background-image : url('https://th.bing.com/th?id=OIP.FdK865T3y7UXoISBjno-nwHaFN&w=298&h=209&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .navbar{
+                gap: 20px;
+                margin: 0 0 0 50%;
+            }
+            a{
+                margin: 15px 0 15px 10px;
+                text-decoration: none;
+                color:black;
+
+            }
+            .navbarsec{
+                display:flex;
+                background-color:white;
+                padding:15px;
+            }
+            ..imgcontainerchild{
+                background-color:grey;
+                border-radius:20px;
+                padding:30px;
+            }
+    body 
+        section.navbarsec
+            h1 Agriculture
+            div.navbar
+                a(href="/fruits") fruits
+                a(href="/pulses") pulses
+                a(href="/vegtables") vegtables
+                a(href='/roots') roots 
+        h1  vegtables
+        div.imgcontainer
+            div.imgcontainerchild
+                img(src=vegtablesdata[0].image)
+                p #{vegtablesdata[0].name}
+                p #{vegtablesdata[0].quantity}
+                span #{vegtablesdata[0].mrp} ₹
+                br
+                span #{vegtablesdata[0].price} ₹
+                strike #{vegtablesdata[0].mrp-vegtablesdata[0].price}
+            div.imgcontainerchild
+                img(src=vegtablesdata[1].image)
+                p #{vegtablesdata[1].name}
+                p #{vegtablesdata[1].quantity}
+                span #{vegtablesdata[1].mrp} ₹
+                br
+                span #{ vegtablesdata[1].price} ₹
+                strike #{ vegtablesdata[1].mrp - vegtablesdata[1].price}
+            div.imgcontainerchild
+                img(src= vegtablesdata[2].image)
+                p #{ vegtablesdata[2].name}
+                p #{ vegtablesdata[2].quantity}
+                span #{ vegtablesdata[2].mrp} ₹
+                br
+                span #{ vegtablesdata[2].price} ₹
+                strike #{ vegtablesdata[2].mrp- vegtablesdata[2].price}
+            div.imgcontainerchild
+                img(src= vegtablesdata[3].image)
+                p #{ vegtablesdata[3].name}
+                p #{ vegtablesdata[3].quantity}
+                span #{ vegtablesdata[3].mrp} ₹ 
+                br
+                span #{ vegtablesdata[3].price} ₹
+                strike #{ vegtablesdata[3].mrp- vegtablesdata[3].price}

@@ -1,0 +1,106 @@
+
+html 
+    head    
+        style.
+            .imgcontainer{
+                display:flex;
+
+            }
+            img {
+                margin:20px;
+                width:250px;
+                height:300px;
+            }
+            .imgcontainerchild{
+                width:350px;
+                margin:20px;
+            }
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            h1 {
+                text-align: center;
+                color: brown;
+                font-size: 30px;
+            }
+            div{
+                font-size: 25px;
+            }
+            body{
+                background-image :url('https://th.bing.com/th/id/OIP.my9l9MRM_G06SkwKPe1w9wHaE7?pid=ImgDet&rs=1');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .navbar{
+                gap: 20px;
+                margin: 0 0 0 50%;
+            }
+            a{
+                margin: 15px 0 15px 10px;
+                text-decoration: none;
+                color:white;
+            }
+            .navbarsec{
+                display:flex;
+                background-color: 2A9D8F;
+                padding:15px;
+            }
+            .navbarsec .navbar a{
+                background-color : E76F51;
+                padding:3px;
+                border-radius:8px;
+                margin:3px;
+            }
+            .imgcontainerchild{
+                background-color:grey;
+                border-radius:20px;
+                padding:30px;
+            }
+
+    body 
+        section.navbarsec
+            h1 Agriculture
+            div.navbar
+                a(href="/fruits") fruits
+                a(href="/pulses") pulses
+                a(href="/vegtables") vegtables
+                a(href='/roots') roots
+        h1 fruits
+        div.imgcontainer
+            div.imgcontainerchild
+                img(src=fruitsdata[0].image)
+                p #{fruitsdata[0].name}
+                p #{fruitsdata[0].quantity}
+                span #{fruitsdata[0].mrp} ₹
+                br
+                span #{fruitsdata[0].price} ₹
+                strike #{fruitsdata[0].mrp-fruitsdata[0].price}
+            div.imgcontainerchild
+                img(src=fruitsdata[1].image)
+                p #{fruitsdata[1].name}
+                p #{fruitsdata[1]. quantity}
+                span #{fruitsdata[1].mrp} ₹
+                br
+                span #{fruitsdata[1].price} ₹
+                strike #{fruitsdata[1].mrp-fruitsdata[1].price}
+            div.imgcontainerchild
+                img(src=fruitsdata[2].image)
+                p #{fruitsdata[2].name}
+                p #{fruitsdata[2]. quantity}
+                span #{fruitsdata[2].mrp} ₹
+                br
+                span #{fruitsdata[2].price} ₹
+                strike #{fruitsdata[2].mrp-fruitsdata[2].price}
+            div.imgcontainerchild
+                img(src=fruitsdata[3].image)
+                p #{fruitsdata[3].name}
+                p #{fruitsdata[3]. quantity}
+                span #{fruitsdata[3].mrp} ₹
+                br
+                span #{fruitsdata[3].price} ₹
+                strike #{fruitsdata[3].mrp-fruitsdata[3].price}
+             
+   
