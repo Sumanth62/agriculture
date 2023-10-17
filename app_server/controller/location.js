@@ -13,28 +13,32 @@ const homelist = (req, res) => {
 
 
 
-
-const renderfruits = (req, res, fruitsdata) => {
-  console.log("retrived data:from server  "+fruitsdata[0].name);
-  res.render('fruits',{fruitsdata});
+let searcheddata=[]
+const renderfruits = (req, res, { fruitsdata, searcheddata }) => {
+  res.render('fruits',{fruitsdata, searcheddata});
 }
-const fruits = function(req, res){
+const fruits = function(req, res) {
   const path = '/api/fruits';
+  const searchQuery = req.query.query;
+
   const requestOptions = {
     url: `${apiOptions.server}${path}`,
     method: 'GET',
     json: {},
-    
   };
-  request(
-    requestOptions,
-    (err, response, body) => {
-      let data = body;
-     
-      renderfruits(req, res, data);
+
+  let searchedData = [];
+  request(requestOptions, (err, response, fruitsdata) => {
+
+    if (searchQuery) {
+      // Filter the data based on the search query
+      searchedData = data.filter(fruit => fruit.season.toLowerCase().includes(searchQuery.toLowerCase()));
     }
-  );
+
+    renderfruits(req, res, { fruitsdata, searcheddata });
+  });
 };
+
 
 
 

@@ -80,45 +80,20 @@ html
             form(action="/search", method="GET")
                 input(type="text", name="query", placeholder="Search...")
                 button(type="submit") Search
-
-
-
-
-
-        h1 fruits
+        h1 Result
         div.imgcontainer
             div.imgcontainerchild
-                img(src=fruitsdata[0].image)
-                p #{fruitsdata[0].name}
-                p #{fruitsdata[0].quantity}
-                span #{fruitsdata[0].mrp} ₹
+                img(src=searchedData.image)
+                p #{searchedData.name}
+                p #{searchedData.quantity}
+                span #{searchedData.mrp} ₹
                 br
-                span #{fruitsdata[0].price} ₹
-                strike #{fruitsdata[0].mrp-fruitsdata[0].price}
-            div.imgcontainerchild
-                img(src=fruitsdata[1].image)
-                p #{fruitsdata[1].name}
-                p #{fruitsdata[1]. quantity}
-                span #{fruitsdata[1].mrp} ₹
-                br
-                span #{fruitsdata[1].price} ₹
-                strike #{fruitsdata[1].mrp-fruitsdata[1].price}
-            div.imgcontainerchild
-                img(src=fruitsdata[2].image)
-                p #{fruitsdata[2].name}
-                p #{fruitsdata[2]. quantity}
-                span #{fruitsdata[2].mrp} ₹
-                br
-                span #{fruitsdata[2].price} ₹
-                strike #{fruitsdata[2].mrp-fruitsdata[2].price}
-            div.imgcontainerchild
-                img(src=fruitsdata[3].image)
-                p #{fruitsdata[3].name}
-                p #{fruitsdata[3]. quantity}
-                span #{fruitsdata[3].mrp} ₹
-                br
-                span #{fruitsdata[3].price} ₹
-                strike #{fruitsdata[3].mrp-fruitsdata[3].price}
+                span #{searchedData.price} ₹
+                strike #{searchedData.mrp - searchedData.price}
+            
+                p No results found
+
+
     script.
         // Get the search input and fruits container
         const searchInput = document.querySelector('input[name="query"]');
